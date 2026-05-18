@@ -36,6 +36,20 @@ export const experiences: Experience[] = [
       "Transitioned projects from Bugzilla to Jira for streamlined tracking."
     ],
     deepDive: "Managed high-availability SQL Server environments using Always On Availability Groups. Led compliance-driven releases and runbook documentation for a Top-10 US Credit Union."
+  },
+  {
+    id: "pcg",
+    company: "Public Consulting Group (PCG)",
+    role: "Software Engineer II",
+    period: "Jun 2015 – Aug 2019",
+    location: "Blacksburg, VA",
+    summary: [
+      "Developed SQL scripts for complex data migrations and reporting.",
+      "Led SDLC processes for multiple software initiatives.",
+      "Enhanced software performance through query optimization and code refactoring.",
+      "Collaborated with cross-functional teams to deliver high-quality solutions."
+    ],
+    deepDive: "Focused on SDLC leadership and performance optimization within a public sector consulting context. Managed large-scale data operations and coordinated between technical and non-technical stakeholders."
   }
 ];
 
@@ -55,5 +69,21 @@ export const projects: Project[] = [
     tags: ["Java", "Android", "Research"],
     githubUrl: "https://github.com/JohnGuidry/Acc",
     deepDive: "CCSC-SE finalist. Implemented magnitude calculation from 3-axis accelerometer data and a moving threshold algorithm for real-time step detection and BPM matching."
+  },
+  {
+    id: "covid_bot",
+    title: "COVID19_BOT",
+    description: "Python Discord Bot that scrapes real-time COVID-19 case data from the NYT dashboard.",
+    tags: ["Python", "Scraping", "Discord"],
+    githubUrl: "https://github.com/JohnGuidry/COVID19_BOT",
+    deepDive: "A Discord bot using async/await event handlers and HTTP scraping (BeautifulSoup4). Features formatted state-by-state tables and numeric filter arguments. Demonstrates practical async framework and environment variable handling."
+  },
+  {
+    id: "aws_site",
+    title: "Personal ASP.NET Site",
+    description: "Personal website built in ASP.NET Core with live SQL database connectivity, deployed to AWS.",
+    tags: ["C#", ".NET", "AWS", "SQL"],
+    githubUrl: "https://github.com/JohnGuidry/JohnGuidrySite",
+    deepDive: "Full-stack project featuring a C# backend (Razor Pages) and SQL Server integration. Orchestrated a two-stage database lifecycle: local development migrated to Amazon RDS. Deployment managed via AWS Elastic Beanstalk with .ebextensions configuration."
   }
 ];

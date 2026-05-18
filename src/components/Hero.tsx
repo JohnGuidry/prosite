@@ -1,7 +1,7 @@
-import type { FC } from 'react';
+import React from 'react';
 import { profile } from '../data/content';
 
-export const Hero: FC = () => (
+export const Hero: React.FC = () => (
   <section className="hero">
     <div className="container">
       <h1>{profile.name}</h1>

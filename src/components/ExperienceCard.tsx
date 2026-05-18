@@ -1,12 +1,11 @@
-import type { FC } from 'react';
+import React from 'react';
 import type { Experience } from '../types';
 
 interface Props {
   exp: Experience;
-  onDeepDive: (id: string) => void;
 }
 
-export const ExperienceCard: FC<Props> = ({ exp, onDeepDive }) => (
+export const ExperienceCard: React.FC<Props> = ({ exp }) => (
   <div className="experience-card">
     <div className="card-header">
       <h3>{exp.role} @ {exp.company}</h3>
@@ -15,10 +14,5 @@ export const ExperienceCard: FC<Props> = ({ exp, onDeepDive }) => (
     <ul className="summary">
       {exp.summary.map((point, i) => <li key={i}>{point}</li>)}
     </ul>
-    {exp.deepDive && (
-      <button onClick={() => onDeepDive(exp.id)} className="btn-deep-dive">
-        Technical Deep Dive →
-      </button>
-    )}
   </div>
 );
