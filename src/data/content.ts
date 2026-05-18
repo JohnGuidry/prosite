@@ -1,4 +1,4 @@
-import { Profile, Experience, Project } from '../types';
+import type { Profile, Experience, Project } from '../types';
 
 export const profile: Profile = {
   name: "John Guidry",
