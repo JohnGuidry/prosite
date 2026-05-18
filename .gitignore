@@ -1,4 +1,16 @@
-# Logs
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build artifacts
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.nuxt/
+
+# Logs and temporary files
 logs
 *.log
 npm-debug.log*
@@ -6,22 +18,49 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+.npm
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+.tsbuildinfo
 
-node_modules
-dist
-dist-ssr
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 *.local
 
-# Editor directories and files
+# Editor / IDE directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.iml
+*.iws
+*.ipr
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+.history/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Testing
+coverage/
+*.lcov
+.nyc_output/
 
 # Agentic/Tooling
 .superpowers/
