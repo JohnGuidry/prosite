@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Hero } from './components/Hero';
 import { Timeline } from './components/Timeline';
 import { ProjectGrid } from './components/ProjectGrid';

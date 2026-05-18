@@ -11,6 +11,7 @@
 }
 
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background-color: var(--bg-primary);
@@ -36,6 +37,7 @@ a { color: var(--accent-primary); text-decoration: none; }
 .contact-links a:hover { border-color: var(--accent-primary); }
 
 .section { padding: 4rem 0; }
+.section:nth-child(even) { background: #111827; }
 .section h2 { font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); width: fit-content; }
 
 .timeline { display: flex; flex-direction: column; gap: 2rem; position: relative; }
