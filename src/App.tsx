@@ -1,5 +1,6 @@
 import { Hero } from './components/Hero';
 import { Timeline } from './components/Timeline';
+import { ProjectGrid } from './components/ProjectGrid';
 import './index.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <main>
       <Hero />
       <Timeline onDeepDive={handleDeepDive} />
+      <ProjectGrid onDeepDive={handleDeepDive} />
     </main>
   );
 }
