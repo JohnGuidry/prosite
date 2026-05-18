@@ -34,3 +34,29 @@ a { color: var(--accent-primary); text-decoration: none; }
 .contact-links { display: flex; gap: 1.5rem; }
 .contact-links a { font-weight: 600; border-bottom: 1px solid transparent; transition: all 0.2s ease-in-out; }
 .contact-links a:hover { border-color: var(--accent-primary); }
+
+.section { padding: 4rem 0; }
+.section h2 { font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); width: fit-content; }
+
+.timeline { display: flex; flex-direction: column; gap: 2rem; position: relative; }
+.experience-card {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s;
+}
+.experience-card:hover { transform: translateX(5px); border-color: var(--accent-primary); }
+.card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; }
+.summary { margin: 0 0 1.5rem 0; padding-left: 1.25rem; color: var(--text-secondary); }
+.btn-deep-dive {
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.btn-deep-dive:hover { background: var(--accent-primary); color: var(--bg-primary); }
