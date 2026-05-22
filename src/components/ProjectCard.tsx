@@ -6,11 +6,16 @@ interface Props {
 }
 
 export const ProjectCard: React.FC<Props> = ({ project }) => (
-  <div className="project-card">
+  <a
+    className="project-card"
+    href={project.githubUrl || undefined}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <div className="project-tags">
       {project.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
     </div>
     <h3>{project.title}</h3>
     <p>{project.description}</p>
-  </div>
+  </a>
 );

@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && rsync -avz --delete dist/ pi@pi-hole.local:/var/www/prosite/dist/",
+    "redeploy": "rsync -avz --delete dist/ pi@pi-hole.local:/var/www/prosite/dist/"
   },
   "dependencies": {
     "react": "^19.2.6",
