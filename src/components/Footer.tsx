@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
             <a href="mailto:john.guidry92@gmail.com">Email</a>
           </div>
           <div className="footer-info">
-            <p>Last Updated: 2026-05-17</p>
+            <p>Last Updated: {__BUILD_TIME__}</p>
             <p>&copy; {new Date().getFullYear()} {profile.name}</p>
           </div>
         </div>

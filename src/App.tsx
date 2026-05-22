@@ -1,3 +1,4 @@
+import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Timeline } from './components/Timeline';
 import { ProjectGrid } from './components/ProjectGrid';
@@ -6,12 +7,15 @@ import './index.css';
 
 function App() {
   return (
-    <main>
-      <Hero />
-      <Timeline />
-      <ProjectGrid />
-      <Footer />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Timeline />
+        <ProjectGrid />
+        <Footer />
+      </main>
+    </>
   );
 }
 
