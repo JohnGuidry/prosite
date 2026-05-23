@@ -58,28 +58,20 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: "prosite",
+    title: "Prosite — Portfolio & Pi-Hole Infrastructure",
+    description: "React/Vite portfolio self-hosted on a Raspberry Pi behind Cloudflare Tunnel with Pi-hole DNS and Nginx reverse proxy.",
+    tags: ["React", "TypeScript", "Nginx", "Cloudflare"],
+    githubUrl: "https://github.com/JohnGuidry/prosite",
+    deepDive: "Full-stack infrastructure project: React/Vite SPA deployed via rsync to a Raspberry Pi running Nginx + Pi-hole. Secured through Cloudflare Tunnel with rate-limited API, security headers, and automated DNS-level ad blocking. Demonstrates self-hosting, DNS management, and infrastructure-as-code discipline."
+  },
+  {
     id: "wam",
     title: "WoW Addon Manager",
     description: "Python CLI tool for managing addons on Linux using CurseForge and GitHub APIs.",
     tags: ["Python", "API", "CLI"],
     githubUrl: "https://github.com/JohnGuidry/wow-addon-manager",
     deepDive: "Features a dual-layered management system (local .toc parsing + JSON registry) to handle complex multi-folder addons. Automated updates and installations via third-party APIs."
-  },
-  {
-    id: "beat",
-    title: "Beat Tracking Android App",
-    description: "Academic research project using signal processing to match exercise tempo with music BPM.",
-    tags: ["Java", "Android", "Research"],
-    githubUrl: "https://github.com/JohnGuidry/Acc",
-    deepDive: "CCSC-SE finalist. Implemented magnitude calculation from 3-axis accelerometer data and a moving threshold algorithm for real-time step detection and BPM matching."
-  },
-  {
-    id: "covid_bot",
-    title: "COVID19_BOT",
-    description: "Python Discord Bot that scrapes real-time COVID-19 case data from the NYT dashboard.",
-    tags: ["Python", "Scraping", "Discord"],
-    githubUrl: "https://github.com/JohnGuidry/COVID19_BOT",
-    deepDive: "A Discord bot using async/await event handlers and HTTP scraping (BeautifulSoup4). Features formatted state-by-state tables and numeric filter arguments. Demonstrates practical async framework and environment variable handling."
   },
   {
     id: "aws_site",
@@ -90,11 +82,19 @@ export const projects: Project[] = [
     deepDive: "Full-stack project featuring a C# backend (Razor Pages) and SQL Server integration. Orchestrated a two-stage database lifecycle: local development migrated to Amazon RDS. Deployment managed via AWS Elastic Beanstalk with .ebextensions configuration."
   },
   {
-    id: "prosite",
-    title: "Prosite — Portfolio & Pi-Hole Infrastructure",
-    description: "React/Vite portfolio self-hosted on a Raspberry Pi behind Cloudflare Tunnel with Pi-hole DNS and Nginx reverse proxy.",
-    tags: ["React", "TypeScript", "Nginx", "Cloudflare"],
-    githubUrl: "https://github.com/JohnGuidry/prosite",
-    deepDive: "Full-stack infrastructure project: React/Vite SPA deployed via rsync to a Raspberry Pi running Nginx + Pi-hole. Secured through Cloudflare Tunnel with rate-limited API, security headers, and automated DNS-level ad blocking. Demonstrates self-hosting, DNS management, and infrastructure-as-code discipline."
+    id: "covid_bot",
+    title: "COVID19_BOT",
+    description: "Python Discord Bot that scrapes real-time COVID-19 case data from the NYT dashboard.",
+    tags: ["Python", "Scraping", "Discord"],
+    githubUrl: "https://github.com/JohnGuidry/COVID19_BOT",
+    deepDive: "A Discord bot using async/await event handlers and HTTP scraping (BeautifulSoup4). Features formatted state-by-state tables and numeric filter arguments. Demonstrates practical async framework and environment variable handling."
+  },
+  {
+    id: "beat",
+    title: "Beat Tracking Android App",
+    description: "Academic research project using signal processing to match exercise tempo with music BPM.",
+    tags: ["Java", "Android", "Research"],
+    githubUrl: "https://github.com/JohnGuidry/Acc",
+    deepDive: "CCSC-SE finalist. Implemented magnitude calculation from 3-axis accelerometer data and a moving threshold algorithm for real-time step detection and BPM matching."
   }
 ];
