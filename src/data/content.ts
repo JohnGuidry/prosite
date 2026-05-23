@@ -19,10 +19,10 @@ export const experiences: Experience[] = [
     period: "Oct 2024 – Present",
     location: "Remote",
     summary: [
-      "Integrating AI-assisted development into ETL workflows to accelerate data pipeline modernization.",
-      "Maintained and enhanced ETL processes including SSIS packages and stored procedures.",
-      "Improved customer satisfaction through direct technical support and clear communication.",
-      "Analyzed and resolved complex data performance issues."
+      "Integrating AI-assisted development into ETL and API integration workflows to accelerate data pipeline modernization.",
+      "Built ETL pipelines and API integrations connecting client systems via SSIS, REST APIs, and stored procedures.",
+      "Improved customer satisfaction through direct technical support — diagnosing data issues and delivering clear resolutions.",
+      "Resolved complex data performance issues through systematic query analysis and targeted optimization."
     ],
     deepDive: "Focus on mission-critical ETL pipeline maintenance for state-regulated child care data. Bridges the gap between deep technical implementation and business value."
   },
@@ -33,9 +33,10 @@ export const experiences: Experience[] = [
     period: "Aug 2019 – Nov 2023",
     location: "Raleigh, NC",
     summary: [
-      "Led the development of a comprehensive SDLC for facility projects.",
-      "Optimized project efficiency through SQL Agent Jobs and Always On AG management.",
-      "Transitioned projects from Bugzilla to Jira for streamlined tracking."
+      "Managed high-availability SQL Server environments using Always On Availability Groups for a Top-10 US credit union.",
+      "Led compliance-driven SDLC for facility projects — ensuring audit readiness across all regulatory releases.",
+      "Automated database maintenance and monitoring through SQL Agent Jobs and proactive performance management.",
+      "Standardized project tracking by migrating from Bugzilla to Jira, improving cross-team visibility."
     ],
     deepDive: "Managed high-availability SQL Server environments using Always On Availability Groups. Led compliance-driven releases and runbook documentation for a Top-10 US Credit Union."
   },
@@ -46,10 +47,10 @@ export const experiences: Experience[] = [
     period: "Jun 2015 – Aug 2019",
     location: "Blacksburg, VA",
     summary: [
-      "Developed SQL scripts for complex data migrations and reporting.",
-      "Led SDLC processes for multiple software initiatives.",
-      "Enhanced software performance through query optimization and code refactoring.",
-      "Collaborated with cross-functional teams to deliver high-quality solutions."
+      "Led end-to-end SDLC for multiple state-level software initiatives — managing requirements, releases, and cross-team coordination.",
+      "Built SQL Server data migration and reporting pipelines processing large-scale datasets for public sector clients.",
+      "Reduced query execution times through systematic performance tuning: indexing, query refactoring, and stored procedure optimization.",
+      "Served as technical liaison between engineering teams and government stakeholders, translating business needs into technical requirements."
     ],
     deepDive: "Focused on SDLC leadership and performance optimization within a public sector consulting context. Managed large-scale data operations and coordinated between technical and non-technical stakeholders."
   }
@@ -87,5 +88,13 @@ export const projects: Project[] = [
     tags: ["C#", ".NET", "AWS", "SQL"],
     githubUrl: "https://github.com/JohnGuidry/JohnGuidrySite",
     deepDive: "Full-stack project featuring a C# backend (Razor Pages) and SQL Server integration. Orchestrated a two-stage database lifecycle: local development migrated to Amazon RDS. Deployment managed via AWS Elastic Beanstalk with .ebextensions configuration."
+  },
+  {
+    id: "prosite",
+    title: "Prosite — Portfolio & Pi-Hole Infrastructure",
+    description: "React/Vite portfolio self-hosted on a Raspberry Pi behind Cloudflare Tunnel with Pi-hole DNS and Nginx reverse proxy.",
+    tags: ["React", "TypeScript", "Nginx", "Cloudflare"],
+    githubUrl: "https://github.com/JohnGuidry/prosite",
+    deepDive: "Full-stack infrastructure project: React/Vite SPA deployed via rsync to a Raspberry Pi running Nginx + Pi-hole. Secured through Cloudflare Tunnel with rate-limited API, security headers, and automated DNS-level ad blocking. Demonstrates self-hosting, DNS management, and infrastructure-as-code discipline."
   }
 ];
