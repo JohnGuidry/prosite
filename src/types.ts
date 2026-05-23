@@ -20,6 +20,7 @@ export interface Project {
 export interface Profile {
   name: string;
   headline: string;
+  tagline: string;
   subheadline: string;
   email: string;
   linkedin: string;
