@@ -3,7 +3,8 @@ import type { Profile, Experience, Project } from '../types';
 export const profile: Profile = {
   name: "John Guidry",
   headline: "Full-Stack Engineer & Database Specialist",
-  subheadline: "Bridging enterprise reliability with modern AI automation. Currently evolving data workflows into agentic systems.",
+  tagline: "Bridging enterprise reliability with modern AI automation.",
+  subheadline: "Currently evolving data workflows into agentic systems.",
   email: "john.guidry92@gmail.com",
   linkedin: "https://www.linkedin.com/in/jrguidry/",
   github: "https://github.com/JohnGuidry",
