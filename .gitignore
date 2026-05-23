@@ -65,3 +65,7 @@ coverage/
 # Agentic/Tooling
 .superpowers/
 .gemini/
+docs/superpowers/
+
+# Deploy infrastructure
+Makefile
