@@ -19,8 +19,8 @@ export const experiences: Experience[] = [
     period: "Oct 2024 – Present",
     location: "Remote",
     summary: [
-      "Integrating AI-assisted development into ETL and API integration workflows to accelerate data pipeline modernization.",
-      "Built ETL pipelines and API integrations connecting client systems via SSIS, REST APIs, and stored procedures.",
+      "Integrating AI-assisted development into ETL workflows to accelerate data pipeline modernization.",
+      "Built ETL pipelines connecting client systems via SSIS and stored procedures, with integration points through customer-facing APIs.",
       "Improved customer satisfaction through direct technical support — diagnosing data issues and delivering clear resolutions.",
       "Resolved complex data performance issues through systematic query analysis and targeted optimization."
     ],
@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     summary: [
       "Managed high-availability SQL Server environments using Always On Availability Groups for a Top-10 US credit union.",
       "Led compliance-driven SDLC for facility projects — ensuring audit readiness across all regulatory releases.",
-      "Automated database maintenance and monitoring through SQL Agent Jobs and proactive performance management.",
+      "Built REST API integrations and automated database maintenance through SQL Agent Jobs and performance monitoring.",
       "Standardized project tracking by migrating from Bugzilla to Jira, improving cross-team visibility."
     ],
     deepDive: "Managed high-availability SQL Server environments using Always On Availability Groups. Led compliance-driven releases and runbook documentation for a Top-10 US Credit Union."
