@@ -18,6 +18,7 @@ export const experiences: Experience[] = [
     period: "Oct 2024 – Present",
     location: "Remote",
     summary: [
+      "Integrating AI-assisted development into ETL workflows to accelerate data pipeline modernization.",
       "Maintained and enhanced ETL processes including SSIS packages and stored procedures.",
       "Improved customer satisfaction through direct technical support and clear communication.",
       "Analyzed and resolved complex data performance issues."
