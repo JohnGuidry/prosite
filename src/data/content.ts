@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
     id: "kinder",
     company: "KinderSystems",
     role: "Database Developer II",
-    period: "Oct 2024 – Present",
+    period: "Oct 2024 – June 2026",
     location: "Remote",
     summary: [
       "Integrating AI-assisted development into ETL workflows to accelerate data pipeline modernization.",
