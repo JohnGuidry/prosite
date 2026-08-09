@@ -9,6 +9,8 @@ Live at **[john-guidry.com](https://john-guidry.com)**
 - **Hero section** with name, role, tagline, and supporting blurb — clear hierarchy for fast scanning
 - **Interactive Timeline** — vertical journey through professional milestones at KinderSystems, SECU, and PCG with entrance animations
 - **Project Showcase** — grid of projects sorted by most recent activity, with colored language indicator dots and equal-height cards
+- **AIS Live Ship Tracker** (`/ais/`) — real-time vessel map powered by an RTL-SDR dongle decoding AIS radio signals, served through a Python API and Leaflet.js (see [docs/ais-setup.md](docs/ais-setup.md))
+- **Web Terminal** (`/term/`) — browser-based shell session via ttyd, proxied through nginx (see [docs/term-setup.md](docs/term-setup.md))
 - **Sticky navigation bar** — glassmorphism fixed top bar with section links and socials
 - **Scroll-triggered entrance animations** — sections and items fade in as you scroll (respects `prefers-reduced-motion`)
 - **OG meta tags** — rich link previews on social media, messaging apps, and chat
