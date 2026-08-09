@@ -121,7 +121,7 @@ function loadHeatmap() {
       document.getElementById('status').className = 'live';
       const hoursLabel = currentHours === 0 ? 'all time' : `${currentHours}h`;
       document.getElementById('count').textContent =
-        `${data.point_count} grid cells &middot; ${hoursLabel}`;
+        `${data.point_count} grid cells · ${hoursLabel}`;
 
       // Fit bounds on first load
       if (!map._loaded) {
