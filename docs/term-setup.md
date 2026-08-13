@@ -142,3 +142,12 @@ curl -s http://127.0.0.1:7682/ | grep -c "Terminal"
 ```
 
 > **Note:** Restarting pyterm kills all active terminal sessions. Warn anyone using `/term/` before restarting.
+
+## Security Hardening
+
+- **WebSocket origin checking:** The `serve()` call passes `origins=ALLOWED_ORIGINS` (john-guidry.com + localhost) to prevent Cross-Site WebSocket Hijacking (CSWSH). A malicious site can't open a WS connection to send shell commands.
+- **Connection limit:** Max 5 concurrent WebSocket connections (`MAX_CONNECTIONS`). Each connection forks a PTY + bash — the limit prevents PTY/memory exhaustion.
+- **Security headers:** HTTP responses include `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy`, and a `Content-Security-Policy` restricting script/style to inline and connections to same-origin WS.
+- **Resize validation:** Terminal resize messages bound cols to 1–500 and rows to 1–200, preventing malformed PTY ioctl calls.
+- **`/ws` path removed from nginx:** The WebSocket is only accessible at `/term/ws`, not the redundant `/ws` path.
+- **shelluser isolation:** `shelluser` has no sudo, no crontab, single group. Service runs as `shelluser`. Both HTTP (7682) and WS (7683) bind to `127.0.0.1` only — not reachable externally except through nginx + Cloudflare Access.
