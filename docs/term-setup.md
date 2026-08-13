@@ -51,13 +51,24 @@ sudo systemctl enable --now pyterm
 
 ## Clipboard Handling
 
-pyterm's inlined JavaScript handles copy/paste without relying solely on the async Clipboard API (which can fail silently under Cloudflare Access):
+pyterm's inlined JavaScript handles copy/paste with two key fixes for xterm.js quirks:
 
-- **Copy (Ctrl+C / right-click):** Tries `navigator.clipboard.writeText()`, falls back to `document.execCommand('copy')` with a temporary textarea. A `copy` event listener also catches native browser copy so any selection lands in the OS clipboard.
-- **Paste (Ctrl+V / right-click):** Reads from `navigator.clipboard.readText()` and calls `term.paste()` exactly once. A `_pasting` guard intercepts the native `paste` event on xterm's hidden textarea to prevent double-paste (which previously caused text to appear twice).
-- **Right-click:** Copies the current selection (if any), otherwise pastes from clipboard.
+### Paste — Ctrl+Shift+V
 
-All clipboard handlers are registered outside the `ws.onopen` callback so they work before the WebSocket connects.
+xterm.js registers its `handlePasteEvent` on **both** `this.textarea` and `this.element` (the `.xterm` div). When a paste event fires on the textarea, it bubbles to `.xterm`, and the handler runs **twice** — pasting text twice (the "testtest" bug).
+
+**Fix:** A bubble-phase `paste` listener on xterm's hidden textarea calls `stopPropagation()` after xterm's own textarea handler fires, preventing the event from reaching the duplicate handler on `.xterm`.
+
+### Copy — Right-click or Ctrl+Insert
+
+xterm.js's selection APIs (`hasSelection()`, `getSelection()`, `_selectionService`) return empty when mouse tracking is active (e.g. `hermes --tui`, `vim`, `tmux` enable mouse mode, which causes xterm to disable its `SelectionService`). Copy uses `window.getSelection()` instead, which captures the browser-level text selection that xterm's `onLinuxMouseSelection` puts into the hidden textarea.
+
+- **Plain shell:** Drag-select text, right-click → browser's native Copy menu.
+- **Inside hermes --tui / mouse-tracking apps:** Hold **Shift** while drag-selecting (forces xterm to bypass mouse tracking), then **Ctrl+Insert** to copy. The selection highlight may not render visually — this is an xterm.js canvas rendering limitation when mouse tracking is active, but the text IS selected and copies correctly.
+- **Ctrl+C:** Always sends SIGINT to the shell. Never used for copy (too easy to accidentally kill a process when a selection exists).
+- **Ctrl+Shift+C:** Not intercepted — opens browser devtools in most browsers.
+
+Right-click does **not** call `preventDefault()` — the browser's native context menu must appear for its Copy menu item to work.
 
 ## Nginx Configuration
 
