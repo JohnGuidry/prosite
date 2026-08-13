@@ -13,10 +13,24 @@ export const profile: Profile = {
 
 export const experiences: Experience[] = [
   {
+    id: "shine",
+    company: "Shine Micro",
+    role: "IT Tech",
+    period: "Jun 2026 – Present",
+    location: "Port Townsend, WA",
+    summary: [
+      "Managing Linux server infrastructure (Ubuntu/Debian) — security updates, hardware monitoring, and remote host provider coordination.",
+      "Administering employee workstations (Windows/Linux) and network infrastructure including Firebox security appliance and firewall rules.",
+      "Developing custom software in Python, PHP, JavaScript, Bash, and SQL for internal tools and product-specific needs.",
+      "Maintaining the AIS receiver network — map plotting, receiver reporting, and MMSI database interfaces (PHP/SQL/Python)."
+    ],
+    deepDive: "Full-spectrum IT and software development at a marine electronics manufacturer. Covers infrastructure management, network security, custom software development, and physical access control — with a focus on the AIS receiver product line."
+  },
+  {
     id: "kinder",
     company: "KinderSystems",
     role: "Database Developer II",
-    period: "Oct 2024 – June 2026",
+    period: "Oct 2024 – Jun 2026",
     location: "Remote",
     summary: [
       "Integrating AI-assisted development into ETL workflows to accelerate data pipeline modernization.",
