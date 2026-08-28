@@ -86,7 +86,7 @@ const TRAIL_FADE_MS = 5 * 60 * 1000; // trail fades over 5 minutes
 const MAX_VESSEL_AGE_MS = 30 * 60 * 1000; // vessels disappear after 30 min stale
 
 const map = L.map('map', { zoomControl: true }).setView([48.11, -122.76], 12);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=__CARTO_KEY__', {
   attribution: '&copy; OSM &copy; CARTO', maxZoom: 19,
 }).addTo(map);
 
