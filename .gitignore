@@ -67,5 +67,9 @@ coverage/
 .gemini/
 docs/superpowers/
 
+# Secrets — never commit
+.carto-key
+secrets/
+
 # Deploy infrastructure
 Makefile
