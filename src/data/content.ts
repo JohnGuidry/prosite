@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
   {
     id: "shine",
     company: "Shine Micro",
-    role: "IT Tech",
+    role: "IT/Software Engineer",
     period: "Jun 2026 – Present",
     location: "Port Townsend, WA",
     summary: [
