@@ -14,6 +14,7 @@ export interface Project {
   description: string;
   tags: string[];
   githubUrl?: string;
+  url?: string;
   deepDive: string;
 }
 

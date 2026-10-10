@@ -72,6 +72,14 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: "ais",
+    title: "AIS Live Ship Tracker",
+    description: "Real-time vessel tracking map — an RTL-SDR dongle decodes AIS radio signals, decoded positions flow through a Python API, and Leaflet.js renders live vessel positions with a signal-density heatmap.",
+    tags: ["RTL-SDR", "Python", "Leaflet", "Hardware"],
+    url: "https://john-guidry.com/ais/",
+    deepDive: "End-to-end radio-to-web pipeline: RTL-SDR dongle decoding AIS (Automatic Identification System) VHF signals, a Python API feeding decoded vessel positions, and a Leaflet.js map with a signal-density heatmap over selectable time ranges. Demonstrates SDR signal processing, real-time data pipelines, and geospatial visualization."
+  },
+  {
     id: "prosite",
     title: "Prosite — Portfolio & Pi-Hole Infrastructure",
     description: "React/Vite portfolio self-hosted on a Raspberry Pi behind Cloudflare Tunnel with Pi-hole DNS and Nginx reverse proxy.",

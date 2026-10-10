@@ -14,6 +14,9 @@ const tagColors: Record<string, string> = {
   '.NET': '#512bd4',
   AWS: '#ff9900',
   SQL: '#00758f',
+  'RTL-SDR': '#38bdf8',
+  Leaflet: '#4ade80',
+  Hardware: '#94a3b8',
 };
 
 interface Props {
@@ -23,7 +26,7 @@ interface Props {
 export const ProjectCard: React.FC<Props> = ({ project }) => (
   <a
     className="project-card"
-    href={project.githubUrl || undefined}
+    href={project.url || project.githubUrl || undefined}
     target="_blank"
     rel="noopener noreferrer"
   >
