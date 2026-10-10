@@ -191,7 +191,7 @@ a { color: var(--accent-primary); text-decoration: none; }
 }
 
 .project-card-body p {
-  margin-top: auto;
+  margin-top: 0.5rem;
 }
 .project-card:hover { border-color: var(--accent-primary); box-shadow: 0 4px 20px rgba(56, 189, 248, 0.1); }
 .tag {
