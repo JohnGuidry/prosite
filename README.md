@@ -66,7 +66,7 @@ npm run deploy
 npm run redeploy
 ```
 
-Requires SSH key access to `pi@pi-hole.local` (192.168.1.48).
+Requires SSH key access to the Pi (`pihole` alias, 192.168.1.48).
 
 ## Infrastructure Maintenance
 
